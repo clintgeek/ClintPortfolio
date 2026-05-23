@@ -7,334 +7,452 @@
     <title>Clint Crocker | Director of Engineering</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        notebook: {
+                            bg: '#0f0f11',
+                            surface: '#17171a',
+                            border: '#26262b',
+                            amber: '#d97706',
+                            green: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@300;400&display=swap"
         rel="stylesheet">
 
     <style>
+        :root {
+            --bg-primary: #0f0f11;
+            --bg-secondary: #17171a;
+            --border-subtle: #26262b;
+            --accent-warm: #d97706;
+            --accent-warm-rgb: 217, 119, 6;
+        }
         body {
-            background-color: #020617;
+            background-color: var(--bg-primary);
+            background-image: 
+                radial-gradient(circle at 80% 0%, rgba(var(--accent-warm-rgb), 0.05) 0%, transparent 65%),
+                radial-gradient(rgba(38, 38, 43, 0.4) 1px, transparent 1px);
+            background-size: 100% 100%, 24px 24px;
+            background-attachment: fixed;
         }
     </style>
 </head>
 
-<body class="font-sans text-slate-200 bg-[#020617]">
+<body class="font-sans text-zinc-300 bg-notebook-bg min-h-screen selection:bg-notebook-amber/20 selection:text-white">
 
     <main class="max-w-5xl mx-auto px-6 py-20">
 
         <!-- HERO -->
         <section class="mb-24">
-            <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-6">
-                DIRECTOR OF ENGINEERING // DISTRIBUTED SYSTEMS // PLATFORM OPERATIONS
-            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:items-center">
+                <div class="lg:col-span-3">
+                    <p class="font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] text-notebook-amber mb-6 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-notebook-green animate-pulse"></span>
+                        DIRECTOR OF ENGINEERING // DISTRIBUTED SYSTEMS // PLATFORM OPERATIONS
+                    </p>
 
-            <h1 class="text-6xl md:text-8xl font-serif font-bold text-white leading-tight">
-                Clint Crocker
-            </h1>
+                    <h1 class="text-5xl md:text-7xl font-sans font-bold text-white tracking-tight leading-[1.1]">
+                        Clint Crocker
+                    </h1>
 
-            <p class="text-2xl text-slate-400 mt-10 max-w-2xl leading-relaxed">
-                I build systems that last—and teams that don’t need me to keep them running.
-            </p>
+                    <p class="text-xl md:text-2xl text-zinc-300 mt-8 max-w-xl leading-relaxed font-light">
+                        I build systems that last—and teams that don’t need me to keep them running.
+                    </p>
 
-            <p class="text-lg text-slate-400 mt-8 max-w-3xl leading-relaxed">
-                Engineering leader focused on distributed systems, operational maturity, AI-assisted engineering
-                workflows, and building high-performing teams.
-            </p>
+                    <p class="text-base text-zinc-400 mt-6 max-w-2xl leading-relaxed">
+                        Engineering leader focused on distributed systems, operational maturity, AI-assisted engineering
+                        workflows, and building high-performing teams.
+                    </p>
 
-            <div class="mt-10 flex gap-6 text-sm">
-                <a href="/public/resume.pdf" target="_blank" class="text-slate-400 hover:text-white">Resume</a>
-                <a href="https://github.com/clintgeek" target="_blank"
-                    class="text-slate-400 hover:text-white">GitHub</a>
-                <a href="https://linkedin.com/in/clintcrocker" target="_blank"
-                    class="text-slate-400 hover:text-white">LinkedIn</a>
+                    <div class="mt-8 flex flex-wrap gap-4 text-xs font-mono">
+                        <a href="/public/resume.pdf" target="_blank" class="border border-zinc-800 bg-notebook-surface/60 px-4 py-2 text-zinc-300 hover:text-white hover:border-notebook-amber hover:bg-notebook-surface transition-all duration-200 rounded">
+                            [ DOWNLOAD_RESUME ]
+                        </a>
+                        <a href="https://github.com/clintgeek" target="_blank" class="border border-zinc-800 bg-notebook-surface/60 px-4 py-2 text-zinc-300 hover:text-white hover:border-notebook-amber hover:bg-notebook-surface transition-all duration-200 rounded">
+                            [ GITHUB_PROFILE ]
+                        </a>
+                        <a href="https://linkedin.com/in/clintcrocker" target="_blank" class="border border-zinc-800 bg-notebook-surface/60 px-4 py-2 text-zinc-300 hover:text-white hover:border-notebook-amber hover:bg-notebook-surface transition-all duration-200 rounded">
+                            [ LINKEDIN_NETWORK ]
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-2">
+                    <div class="relative group">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-notebook-amber/10 to-notebook-amber/5 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-notebook-surface border border-zinc-850 p-3 rounded-lg shadow-2xl">
+                            <!-- Small corner brackets -->
+                            <div class="absolute top-2 left-2 w-3 h-3 border-t border-l border-zinc-700"></div>
+                            <div class="absolute top-2 right-2 w-3 h-3 border-t border-r border-zinc-700"></div>
+                            <div class="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-zinc-700"></div>
+                            <div class="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-zinc-700"></div>
+                            
+                            <img src="/public/hero.webp" alt="Engineering Workspace" class="w-full h-auto object-cover rounded border border-zinc-850 grayscale-[15%] sepia-[10%] contrast-[105%] group-hover:grayscale-0 transition duration-500">
+                            
+                            <div class="mt-3 flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                                <span>REF // WORKSPACE_01</span>
+                                <span>EST. 1996</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ABOUT -->
-        <section class="mb-28 space-y-8">
-            <p class="text-xl text-slate-400 leading-relaxed">
+        <section class="mb-28 space-y-6">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[01 // PERSPECTIVE]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
+            
+            <p class="text-xl text-zinc-300 leading-relaxed font-light">
                 I’ve spent most of my career building systems that have to work in the real world—where downtime costs
                 money and edge cases are just normal operations.
             </p>
 
-            <p class="text-lg text-slate-400 leading-relaxed">
+            <p class="text-lg text-zinc-400 leading-relaxed">
                 Most of that work has lived inside complex, high-stakes environments—distributed systems, legacy
                 constraints, and real operational pressure. I’ve led teams through modernization efforts, reduced
                 infrastructure costs without slowing delivery, and built systems that continue to scale long after I’ve
                 stepped back from them.
             </p>
 
-            <p class="text-lg text-slate-400 leading-relaxed">
+            <p class="text-lg text-zinc-400 leading-relaxed">
                 I stay close enough to the systems to make the hard technical tradeoffs when they matter—but my focus is
                 building teams that can do that without me.
             </p>
 
-            <p class="text-xl text-slate-300 leading-relaxed italic">
+            <p class="text-xl text-zinc-200 leading-relaxed italic border-l-2 border-notebook-amber/40 pl-4 py-1">
                 At the end of the day, I just want to build great teams and ship products people actually love using.
             </p>
         </section>
 
         <!-- IMPACT -->
-        <section class="mb-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-left">
+        <section class="mb-28">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
 
-                <div class="md:border-r md:border-white/10 md:pr-8">
-                    <div class="text-3xl text-white mb-2">Near-Zero</div>
-                    <div class="text-sm text-slate-500">Attrition over 5 years</div>
+                <div class="bg-notebook-surface/60 border border-zinc-850 p-6 rounded-lg relative overflow-hidden group hover:border-zinc-700 transition duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-notebook-amber/60 to-transparent"></div>
+                    <span class="absolute top-2 right-3 font-mono text-[9px] text-zinc-600">METRIC // 01</span>
+                    <div class="text-3xl font-semibold text-white mb-2 mt-2">Near-Zero</div>
+                    <div class="text-sm text-zinc-400">Attrition over 5 years</div>
                 </div>
 
-                <div class="md:border-r md:border-white/10 md:px-8">
-                    <div class="text-3xl text-white mb-2">33%</div>
-                    <div class="text-sm text-slate-500">Infrastructure cost reduction</div>
+                <div class="bg-notebook-surface/60 border border-zinc-850 p-6 rounded-lg relative overflow-hidden group hover:border-zinc-700 transition duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-notebook-amber/60 to-transparent"></div>
+                    <span class="absolute top-2 right-3 font-mono text-[9px] text-zinc-600">METRIC // 02</span>
+                    <div class="text-3xl font-semibold text-white mb-2 mt-2">33%</div>
+                    <div class="text-sm text-zinc-400">Infrastructure cost reduction</div>
                 </div>
 
-                <div class="md:pl-8">
-                    <div class="text-3xl text-white mb-2">Process Automation</div>
-                    <div class="text-sm text-slate-500">Replaced long-running manual release</div>
+                <div class="bg-notebook-surface/60 border border-zinc-850 p-6 rounded-lg relative overflow-hidden group hover:border-zinc-700 transition duration-300">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-notebook-amber/60 to-transparent"></div>
+                    <span class="absolute top-2 right-3 font-mono text-[9px] text-zinc-600">METRIC // 03</span>
+                    <div class="text-3xl font-semibold text-white mb-2 mt-2">Process Automation</div>
+                    <div class="text-sm text-zinc-400">Replaced long-running manual release</div>
                 </div>
 
             </div>
-        </section>
-        <!-- PROOF OF EXECUTION -->
+           <!-- PROOF OF EXECUTION -->
         <section class="mb-28">
-            <h2 class="text-3xl text-white mb-12">Selected Work</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[02 // PROOF OF EXECUTION]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
 
             <div class="space-y-16">
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <h3 class="text-xl text-white mb-2">AI-Orchestrated Workflow System</h3>
-                    <p class="text-slate-400 mb-4">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-white">AI-Orchestrated Workflow System</h3>
+                        <span class="font-mono text-[10px] text-zinc-500">SYSTEM_R&D // CORE</span>
+                    </div>
+                    <p class="text-zinc-400 mb-4 leading-relaxed">
                         Built agentic workflows to reduce repetitive operational work, improve delivery consistency, and
                         streamline engineering coordination across distributed teams.
                     </p>
 
-                    <p class="text-sm text-slate-500 mb-4">
-                        AI Workflows • Engineering Operations • Delivery Automation • Distributed Systems
-                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px] text-zinc-450">
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">AI Workflows</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Engineering Operations</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Delivery Automation</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Distributed Systems</span>
+                    </div>
 
-                    <div class="overflow-hidden rounded">
+                    <div class="overflow-hidden rounded border border-zinc-850 bg-notebook-surface shadow-lg group-hover:border-zinc-700 transition duration-300">
                         <img src="/public/geekPr.png" alt="AI-Orchestrated Workflow System" loading="lazy"
-                            class="zoomable-image cursor-zoom-in rounded border border-white/10 shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full rounded opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
                 </div>
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <h3 class="text-xl text-white mb-2">High-Concurrency Encryption Service</h3>
-                    <p class="text-slate-400 mb-4">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-white">High-Concurrency Encryption Service</h3>
+                        <span class="font-mono text-[10px] text-zinc-500">SECURE_R&D // STAGE_01</span>
+                    </div>
+                    <p class="text-zinc-400 mb-4 leading-relaxed">
                         Developed a Rust-based encryption service designed to isolate sensitive data and support secure,
                         high-concurrency production workloads with minimal operational overhead.
                     </p>
 
-                    <p class="text-sm text-slate-500 mb-4">
-                        Rust • Secure Systems • Concurrent Architecture • Operational Reliability
-                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px] text-zinc-450">
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Rust</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Secure Systems</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Concurrent Architecture</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Operational Reliability</span>
+                    </div>
 
-                    <div class="overflow-hidden rounded">
+                    <div class="overflow-hidden rounded border border-zinc-850 bg-notebook-surface shadow-lg group-hover:border-zinc-700 transition duration-300">
                         <img src="/public/geekLock.png" alt="High-Concurrency Encryption Service" loading="lazy"
-                            class="zoomable-image cursor-zoom-in rounded border border-white/10 shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full rounded opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
                 </div>
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <h3 class="text-xl text-white mb-2">Release Automation System</h3>
-                    <p class="text-slate-400 mb-4">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-semibold text-white">Release Automation System</h3>
+                        <span class="font-mono text-[10px] text-zinc-500">OPS_AUTOMATION // DEPLOY</span>
+                    </div>
+                    <p class="text-zinc-400 mb-4 leading-relaxed">
                         Automated a long-running manual release process to reduce deployment friction, improve
                         consistency, and eliminate repetitive operational bottlenecks.
                     </p>
 
-                    <p class="text-sm text-slate-500 mb-4">
-                        CI/CD • Release Engineering • Operational Scaling • Workflow Automation
-                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 font-mono text-[10px] text-zinc-450">
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">CI/CD</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Release Engineering</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Operational Scaling</span>
+                        <span class="bg-notebook-surface border border-zinc-800 px-2 py-0.5 rounded">Workflow Automation</span>
+                    </div>
 
-                    <div class="overflow-hidden rounded">
+                    <div class="overflow-hidden rounded border border-zinc-850 bg-notebook-surface shadow-lg group-hover:border-zinc-700 transition duration-300">
                         <img src="/public/geekSuiteBuilder.png" alt="Release Automation System" loading="lazy"
-                            class="zoomable-image cursor-zoom-in rounded border border-white/10 shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full rounded opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
                 </div>
 
             </div>
         </section>
+
         <!-- ADDITIONAL PROJECTS -->
         <section class="mb-28">
-            <h2 class="text-3xl text-white mb-12">Additional Projects</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[03 // ADDITIONAL LABS]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
 
             <div class="grid md:grid-cols-2 gap-8">
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <div class="overflow-hidden rounded-xl border border-white/10 bg-[#0b1220] h-[260px]">
+                    <div class="overflow-hidden rounded-xl border border-zinc-850 bg-notebook-surface h-[260px]">
                         <img src="/public/bookGeek.png" alt="BookGeek" loading="lazy"
-                            class="zoomable-image cursor-zoom-in w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-lg text-white">BookGeek</h3>
+                        <h3 class="text-lg font-semibold text-white">BookGeek</h3>
 
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
                             Personal library and reading management platform focused on large-scale organization,
                             filtering, metadata management, and workflow-driven UX.
                         </p>
 
-                        <p class="text-slate-500 text-xs mt-3">
-                            React • TypeScript • UX Systems • Search & Filtering
+                        <p class="font-mono text-[10px] text-notebook-amber/80 mt-3">
+                            // React • TypeScript • UX Systems • Search & Filtering
                         </p>
                     </div>
                 </div>
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <div class="overflow-hidden rounded-xl border border-white/10 bg-[#0b1220] h-[260px]">
+                    <div class="overflow-hidden rounded-xl border border-zinc-850 bg-notebook-surface h-[260px]">
                         <img src="/public/bujoGeek.png" alt="BujoGeek" loading="lazy"
-                            class="zoomable-image cursor-zoom-in w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full h-full object-contain p-4 opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-lg text-white">BujoGeek</h3>
+                        <h3 class="text-lg font-semibold text-white">BujoGeek</h3>
 
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
                             Workflow-oriented productivity system inspired by bullet journaling, designed to streamline
                             planning, task management, and operational organization.
                         </p>
 
-                        <p class="text-slate-500 text-xs mt-3">
-                            Workflow Design • Productivity Systems • Operational UX
+                        <p class="font-mono text-[10px] text-notebook-amber/80 mt-3">
+                            // Workflow Design • Productivity Systems • Operational UX
                         </p>
                     </div>
                 </div>
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <div class="overflow-hidden rounded-xl border border-white/10 bg-[#0b1220] h-[260px]">
+                    <div class="overflow-hidden rounded-xl border border-zinc-850 bg-notebook-surface h-[260px]">
                         <img src="/public/noteGeek.png" alt="NoteGeek" loading="lazy"
-                            class="zoomable-image cursor-zoom-in w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
+                            class="zoomable-image cursor-zoom-in w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-lg text-white">NoteGeek</h3>
+                        <h3 class="text-lg font-semibold text-white">NoteGeek</h3>
 
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
                             Extensible note-taking and knowledge management platform supporting structured content,
                             markdown workflows, and developer-centric organization.
                         </p>
 
-                        <p class="text-slate-500 text-xs mt-3">
-                            Knowledge Systems • Markdown • Information Architecture
+                        <p class="font-mono text-[10px] text-notebook-amber/80 mt-3">
+                            // Knowledge Systems • Markdown • Information Architecture
                         </p>
                     </div>
                 </div>
 
                 <div class="group transition-transform duration-300 ease-out hover:-translate-y-1">
-                    <div
-                        class="overflow-hidden rounded-xl border border-white/10 bg-[#0b1220] h-[260px] flex items-center justify-center">
+                    <div class="overflow-hidden rounded-xl border border-zinc-850 bg-notebook-surface h-[260px] flex items-center justify-center">
                         <img src="/public/fitnessGeekMobile.png" alt="FitnessGeek" loading="lazy"
-                            class="zoomable-image cursor-zoom-in h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
+                            class="zoomable-image cursor-zoom-in h-full object-contain p-4 opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition duration-300">
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-lg text-white">FitnessGeek</h3>
+                        <h3 class="text-lg font-semibold text-white">FitnessGeek</h3>
 
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
                             Mobile-first health and nutrition tracking application focused on simplicity, habit
                             visibility, and sustainable day-to-day usability.
                         </p>
 
-                        <p class="text-slate-500 text-xs mt-3">
-                            Mobile UX • Health Tracking • User-Centered Design
+                        <p class="font-mono text-[10px] text-notebook-amber/80 mt-3">
+                            // Mobile UX • Health Tracking • User-Centered Design
                         </p>
                     </div>
                 </div>
 
             </div>
         </section>
+
         <!-- LEADERSHIP -->
         <section class="mb-28">
-            <h2 class="text-3xl text-white mb-12">How I Lead</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[04 // LEADERSHIP PHILOSOPHY]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
 
-            <div class="space-y-8">
-
-                <div>
-                    <h4 class="text-xl text-white">I build teams that don’t burn out</h4>
-                    <p class="text-slate-400">Long-term velocity beats short-term heroics.</p>
+            <div class="border-l border-zinc-800/80 pl-6 space-y-8 relative">
+                <div class="relative">
+                    <div class="absolute -left-[30px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 border border-notebook-amber"></div>
+                    <h4 class="text-lg font-semibold text-white">I build teams that don’t burn out</h4>
+                    <p class="text-zinc-400 mt-1">Long-term velocity beats short-term heroics.</p>
                 </div>
 
-                <div>
-                    <h4 class="text-xl text-white">I keep engineers close to real problems</h4>
-                    <p class="text-slate-400">The best code comes from understanding the customer.</p>
+                <div class="relative">
+                    <div class="absolute -left-[30px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 border border-notebook-amber"></div>
+                    <h4 class="text-lg font-semibold text-white">I keep engineers close to real problems</h4>
+                    <p class="text-zinc-400 mt-1">The best code comes from understanding the customer.</p>
                 </div>
 
-                <div>
-                    <h4 class="text-xl text-white">I expect strong opinions, not ego</h4>
-                    <p class="text-slate-400">We debate ideas, not titles.</p>
+                <div class="relative">
+                    <div class="absolute -left-[30px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 border border-notebook-amber"></div>
+                    <h4 class="text-lg font-semibold text-white">I expect strong opinions, not ego</h4>
+                    <p class="text-zinc-400 mt-1">We debate ideas, not titles.</p>
                 </div>
 
-                <div>
-                    <h4 class="text-xl text-white">I remove friction more than I add process</h4>
-                    <p class="text-slate-400">I don’t add process unless it earns its place.</p>
+                <div class="relative">
+                    <div class="absolute -left-[30px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 border border-notebook-amber"></div>
+                    <h4 class="text-lg font-semibold text-white">I remove friction more than I add process</h4>
+                    <p class="text-zinc-400 mt-1">I don’t add process unless it earns its place.</p>
                 </div>
-
             </div>
         </section>
 
         <!-- HOW I WORK -->
         <section class="mb-28">
-            <h2 class="text-3xl text-white mb-12">How I Work</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[05 // WORK METHODOLOGY]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
 
-            <div class="space-y-6 text-slate-400">
+            <div class="space-y-6 text-zinc-400 border-l border-zinc-800/80 pl-6">
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p class="text-zinc-450">I stay close to the work, but I don’t become the bottleneck.</p>
+                </div>
 
-                <p>I stay close to the work, but I don’t become the bottleneck.</p>
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p class="text-zinc-450">I push for clarity over process—teams move faster when expectations are explicit.</p>
+                </div>
 
-                <p>I push for clarity over process—teams move faster when expectations are explicit.</p>
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p class="text-zinc-450">I partner across Product and business functions to make sure engineering effort maps to real outcomes.</p>
+                </div>
 
-                <p>I partner across Product and business functions to make sure engineering effort maps to real
-                    outcomes.</p>
-
-                <p>I build systems and teams that continue working long after I’ve stepped out of the critical path.</p>
-
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p class="text-zinc-450">I build systems and teams that continue working long after I’ve stepped out of the critical path.</p>
+                </div>
             </div>
         </section>
 
         <!-- TECHNICAL CORE -->
         <section class="mb-28">
-            <h2 class="text-3xl text-white mb-12">Technical Core</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-xs text-notebook-amber tracking-wider">[06 // CORE PRINCIPLES]</span>
+                <div class="h-[1px] flex-grow bg-zinc-800/80"></div>
+            </div>
 
-            <div class="space-y-6 text-slate-400">
+            <div class="space-y-6 text-zinc-400 border-l border-zinc-800/80 pl-6">
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p><strong class="text-white font-medium">Security matters early.</strong> Strong systems are designed with
+                        operational trust boundaries in mind from the beginning.</p>
+                </div>
 
-                <p><strong class="text-white">Security matters early.</strong> Strong systems are designed with
-                    operational trust boundaries in mind from the beginning.</p>
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p><strong class="text-white font-medium">Automate repetitive work.</strong> Good automation reduces friction and
+                        gives teams more time for meaningful engineering problems.</p>
+                </div>
 
-                <p><strong class="text-white">Automate repetitive work.</strong> Good automation reduces friction and
-                    gives teams more time for meaningful engineering problems.</p>
-
-                <p><strong class="text-white">Stay close to the systems.</strong> Leadership without technical
-                    credibility doesn’t scale.</p>
-
+                <div class="flex gap-3 items-start">
+                    <span class="font-mono text-xs text-notebook-amber mt-0.5">//</span>
+                    <p><strong class="text-white font-medium">Stay close to the systems.</strong> Leadership without technical
+                        credibility doesn’t scale.</p>
+                </div>
             </div>
         </section>
+
         <!-- FOOTER -->
-        <footer class="pt-8 border-t border-white/10 text-sm text-slate-500">
-            <!-- <section class="mb-16 opacity-50"> -->
-            <div class="mb-8 flex flex-wrap items-center gap-3">
-                <span class="font-mono text-[10px] text-slate-500 uppercase tracking-[0.25em] pr-4">
-                    // Daily Driver
-                </span>
-                <span class="font-mono text-xs text-slate-400">Arch Linux</span>
-                <span class="text-white/15">•</span>
-
-                <span class="font-mono text-xs text-slate-400">ROG G14</span>
-                <span class="text-white/15">•</span>
-
-                <span class="font-mono text-xs text-slate-400">Planck 40%</span>
-                <span class="text-white/15">•</span>
-
-                <span class="font-mono text-xs text-slate-400">MX Master 3</span>
+        <footer class="pt-8 border-t border-zinc-800 text-sm text-zinc-500">
+            <div class="mb-10 bg-notebook-surface/40 border border-zinc-850 p-4 rounded font-mono text-xs text-zinc-400">
+                <span class="text-zinc-600 block mb-3 uppercase tracking-wider">// Daily Driver Specifications</span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div><span class="text-zinc-600">OS:</span> Arch Linux</div>
+                    <div><span class="text-zinc-600">HW:</span> ROG G14</div>
+                    <div><span class="text-zinc-600">KB:</span> Planck 40%</div>
+                    <div><span class="text-zinc-600">MS:</span> MX Master 3</div>
+                </div>
             </div>
-            <!-- </section> -->
-            <div class="flex flex-col md:flex-row justify-between gap-6">
-                <div>
-                    Clint Crocker
+
+            <div class="flex flex-col md:flex-row justify-between gap-6 font-mono text-xs">
+                <div class="text-zinc-500">
+                    © Clint Crocker <span class="text-zinc-600">// EST. 1996</span>
                 </div>
                 <div class="flex gap-6">
-                    <a href="/public/resume.pdf" target="_blank">Resume</a>
-                    <a href="https://github.com/clintgeek" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/clintcrocker" target="_blank">LinkedIn</a>
+                    <a href="/public/resume.pdf" target="_blank" class="text-zinc-400 hover:text-white transition-colors">[ RESUME ]</a>
+                    <a href="https://github.com/clintgeek" target="_blank" class="text-zinc-400 hover:text-white transition-colors">[ GITHUB ]</a>
+                    <a href="https://linkedin.com/in/clintcrocker" target="_blank" class="text-zinc-400 hover:text-white transition-colors">[ LINKEDIN ]</a>
                 </div>
             </div>
         </footer>
@@ -342,11 +460,11 @@
 
     <!-- Lightbox Modal -->
     <div id="image-modal"
-        class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+        class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950/95 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
         role="dialog" aria-modal="true">
         <!-- Close Button -->
         <button id="modal-close"
-            class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none"
+            class="absolute top-6 right-6 text-zinc-400 hover:text-notebook-amber transition-colors duration-200 focus:outline-none"
             aria-label="Close modal">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -357,8 +475,8 @@
         <div id="modal-content"
             class="max-w-5xl max-h-[85vh] p-4 scale-95 opacity-0 transition-all duration-300 ease-out transform flex flex-col items-center justify-center">
             <img id="modal-img" src="" alt=""
-                class="max-w-full max-h-[75vh] rounded-lg shadow-2xl border border-white/10 object-contain">
-            <p id="modal-caption" class="text-center text-slate-400 text-sm mt-4 font-mono tracking-wide"></p>
+                class="max-w-full max-h-[75vh] rounded-lg shadow-2xl border border-zinc-800 object-contain">
+            <p id="modal-caption" class="text-center text-zinc-400 text-sm mt-4 font-mono tracking-wide"></p>
         </div>
     </div>
 
