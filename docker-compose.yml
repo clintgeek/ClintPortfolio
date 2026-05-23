@@ -1,0 +1,10 @@
+services:
+  portfolio:
+    build: .
+    container_name: clint-portfolio
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
+      - ./public:/usr/share/nginx/html/public
+    restart: always
